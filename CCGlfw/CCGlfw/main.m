@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CCGlfw/glfw3.h>
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        NSLog(@"Hello, World!");
+
+        const char* ver = glfwGetVersionString();
+        printf("ver = %s\n", ver);
     }
+    
     return 0;
 }

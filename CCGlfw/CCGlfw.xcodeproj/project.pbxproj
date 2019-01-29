@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00FC682621E9AAA2006059B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FC682521E9AAA2006059B9 /* main.m */; };
+		20D283BA09BB33679865B127 /* libPods-CCGlfw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 371B1CBCB1B03EBDFA15C636 /* libPods-CCGlfw.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		00FC682221E9AAA2006059B9 /* CCGlfw */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CCGlfw; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FC682521E9AAA2006059B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18E1A3DE51594619DB84E73B /* Pods-CCGlfw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCGlfw.release.xcconfig"; path = "Target Support Files/Pods-CCGlfw/Pods-CCGlfw.release.xcconfig"; sourceTree = "<group>"; };
+		371B1CBCB1B03EBDFA15C636 /* libPods-CCGlfw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCGlfw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE19C1203B1DA364295FE13E /* Pods-CCGlfw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCGlfw.debug.xcconfig"; path = "Target Support Files/Pods-CCGlfw/Pods-CCGlfw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D283BA09BB33679865B127 /* libPods-CCGlfw.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,8 @@
 			children = (
 				00FC682421E9AAA2006059B9 /* CCGlfw */,
 				00FC682321E9AAA2006059B9 /* Products */,
+				F59762ECD6749155FF99FE7E /* Pods */,
+				8FCCF8837167B9ABD6F95E1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +69,24 @@
 			path = CCGlfw;
 			sourceTree = "<group>";
 		};
+		8FCCF8837167B9ABD6F95E1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				371B1CBCB1B03EBDFA15C636 /* libPods-CCGlfw.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F59762ECD6749155FF99FE7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE19C1203B1DA364295FE13E /* Pods-CCGlfw.debug.xcconfig */,
+				18E1A3DE51594619DB84E73B /* Pods-CCGlfw.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -69,6 +94,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00FC682921E9AAA2006059B9 /* Build configuration list for PBXNativeTarget "CCGlfw" */;
 			buildPhases = (
+				8D64576D49BD85601EED9984 /* [CP] Check Pods Manifest.lock */,
 				00FC681E21E9AAA2006059B9 /* Sources */,
 				00FC681F21E9AAA2006059B9 /* Frameworks */,
 				00FC682021E9AAA2006059B9 /* CopyFiles */,
@@ -112,6 +138,31 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D64576D49BD85601EED9984 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CCGlfw-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00FC681E21E9AAA2006059B9 /* Sources */ = {
@@ -238,6 +289,7 @@
 		};
 		00FC682A21E9AAA2006059B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE19C1203B1DA364295FE13E /* Pods-CCGlfw.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -246,6 +298,7 @@
 		};
 		00FC682B21E9AAA2006059B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18E1A3DE51594619DB84E73B /* Pods-CCGlfw.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
